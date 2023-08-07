@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>TWYI Assignment</title>
+  <!-- Include the external CSS file -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <!-- Brand Logo -->
+  <a href="#" class="brand">
+    <img src="./images/logo.svg" alt="Logo">
+  </a>
+
+  <!-- Hamburger Menu Icon -->
+  <a href="#" class="ham">
+    <img src="./images/icon-menu.svg" alt="Hamburger Menu">
+  </a>
+
+  <!-- Navigation Links -->
+  <div class="nav-ul">
+
+    <!-- Dropdown Menu - Features -->
+    <div class="dropdown">
+      <a class="dropbtn">
+        Features <img src="./images/icon-arrow-up.svg" alt="Arrow Up">
+      </a>
+      <div class="dropdown-content">
+        <a href="#"><img src="./images/icon-todo.svg" alt=""/> TodoList </a>
+        <a href="#"><img src="./images/icon-calendar.svg" alt=""/> Calendar </a>
+        <a href="#"><img src="./images/icon-reminders.svg" alt=""/> Reminders </a>
+        <a href="#"><img src="./images/icon-planning.svg" alt=""/> Planning </a>
+      </div>
+    </div>
+
+    <!-- Dropdown Menu - Company -->
+    <div class="dropdown">
+      <a class="dropbtn">
+        Company <img src="./images/icon-arrow-up.svg" alt="Arrow Up">
+      </a>
+      <div class="dropdown-content">
+        <a href="#">History</a>
+        <a href="#">Our Team</a>
+        <a href="#">Blog</a>
+      </div>
+    </div>
+
+    <!-- Other Navigation Links -->
+    <a href="#">Careers</a>
+    <a href="#">About</a>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-btns">
+    <button><a href="#">Login</a></button>
+    <button><a href="#">Register</a></button>
+  </div>
+
+</nav>
+
+<!-- Mobile Responsive Overlay -->
+<div class="overlay">
+
+  <div class="mobile-res">
+    <img src="./images/icon-close-menu.svg" id="close-Menu">
+    <div class="mobile-res-con">
+
+      <!-- Mobile Responsive Dropdown - Features -->
+      <div class="dropdown">
+        <div class="dropbtn">
+          Features <img src="./images/icon-arrow-up.svg" alt="Arrow Up">
+        </div>
+        <div class="dropdown-content">
+          <a href="#"><img src="./images/icon-todo.svg" alt=""/> TodoList </a>
+          <a href="#"><img src="./images/icon-calendar.svg" alt=""/> Calendar </a>
+          <a href="#"><img src="./images/icon-reminders.svg" alt=""/> Reminders </a>
+          <a href="#"><img src="./images/icon-planning.svg" alt=""/> Planning </a>
+        </div>
+      </div>
+
+      <!-- Mobile Responsive Dropdown - Company -->
+      <div class="dropdown">
+        <div class="dropbtn">
+          Company <img src="./images/icon-arrow-up.svg" alt="Arrow Up">
+        </div>
+        <div class="dropdown-content">
+          <a href="#">History</a>
+          <a href="#">Our Team</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+
+      <!-- Other Mobile Responsive Navigation Links -->
+      <a href="#" class="lol">Login</a>
+      <button class="reg"><a href="#">Register</a></button>
+
+    </div>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+  <!-- Hero Text and Call-to-Action -->
+  <div class="hero-text">
+    <h1>Make <br /> remote work</h1>
+    <p>Get your team in sync, no matter your location. Streamline processes,
+      create team rituals, and watch productivity soar.</p>
+
+    <button>Learn More</button>
+
+    <!-- Client Logos -->
+    <div class="logos">
+      <img src="./images/client-databiz.svg" alt="Client Logo">
+      <img src="./images/client-audiophile.svg" alt="Client Logo">
+      <img src="./images/client-meet.svg" alt="Client Logo">
+      <img src="./images/client-maker.svg" alt="Client Logo">
+    </div>
+  </div>
+  <!-- Hero Image -->
+  <div class="img-container">
+    <img src="./images/image-hero-desktop.png" id="hero-img" alt="Hero Image">
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  // Handle click event for Hamburger Menu
+  const ham = document.querySelector('.ham')
+  ham.addEventListener('click', e=>{
+    document.querySelector('.mobile-res').classList.add('show')
+    document.querySelector('.overlay').style.display = 'block'
+    document.querySelector('body').classList.add('lock')
+  })
+  
+  // Handle click event for closing Mobile Responsive Menu
+  document.querySelector('#close-Menu').addEventListener('click', e =>{
+    document.querySelector('.mobile-res').classList.remove('show')
+    document.querySelector('.overlay').style.display = 'none'
+    document.querySelector('body').classList.remove('lock')
+  })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+/* Reset the margin of the body element */
+body {
+  margin: 0;
+}
+
+/* Center-align text for elements with class 'lol' */
+.lol {
+  text-align: center;
+}
+
+/* Style the input elements with class 'reg' */
+.reg {
+  outline: none;
+  border: none;
+  border-radius: 1.4em;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+/* Hide the overflowing content in elements with class 'lock' */
+.lock {
+  overflow: hidden;
+}
+
+/* Style the first button inside '.nav-btns' */
+.nav-btns button:nth-child(1) {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+/* Style the second button inside '.nav-btns' */
+.nav-btns button:nth-child(2) {
+  outline: none;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+/* Style anchor links */
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline;
+  margin: 10px;
+}
+
+/* Hide elements with class 'ham' */
+.ham {
+  display: none;
+}
+
+/* Create an overlay for popup elements */
+.overlay {
+  display: none;
+}
+
+/* Style the navigation unordered list */
+.nav-ul {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 1em;
+}
+
+/* Style the navigation container */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* Style heading level 1 */
+h1 {
+  font-size: 70px;
+  width: 500px;
+  font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/* Style paragraphs */
+p {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  color: #888;
+}
+
+/* Style the hero section */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(2, 450px);
+  grid-gap: 80px;
+  margin: 0 auto;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Set maximum width for images inside '.img-container' */
+.img-container img {
+  width: 100%;
+}
+
+/* Style the logos section */
+.logos {
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2em;
+}
+
+/* Style the hero buttons */
+.hero button {
+  margin-top: 40px;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 1s;
+}
+
+/* Apply unique style to hero button on hover */
+.hero button:hover {
+  background-color: transparent;
+  border: 1px solid #000;
+  color: #888;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+/* Create a dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+  border-radius: 10px;
+  padding: 20px;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  width: 120px;
+  z-index: 2;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the links inside the dropdown content */
+.dropdown-content a {
+  color: #000;
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Add an icon next to links inside the dropdown content */
+.dropdown-content img {
+  margin-right: 10px;
+}
+
+/* Apply unique style to links inside the dropdown on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown content when hovering over the dropdown */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Media query for screens with maximum width 1200px */
+@media (max-width: 1200px) {
+  /* Adjust hero layout for smaller screens */
+  .hero {
+    max-width: 960px;
+    grid-template-columns: repeat(2, 400px);
+  }
+}
+
+/* Media query for screens with maximum width 900px */
+@media (max-width: 900px) {
+  /* Hide navigation buttons and unordered list */
+  .nav-btns {
+    display: none;
+  }
+  .nav-ul {
+    display: none;
+  }
+  /* Adjust navigation layout for smaller screens */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  /* Show the hamburger menu icon */
+  .ham {
+    display: block;
+  }
+  /* Adjust hero layout for smaller screens */
+  .hero {
+    margin: 50px;
+    max-width: 960px;
+    grid-template-columns: repeat(1, max(200px, 350px));
+  }
+  /* Show a mobile-friendly image */
+  .img-container {
+    grid-row: 1;
+  }
+  .img-container img {
+    content: url(images/image-hero-mobile.png);
+    max-width: 100%;
+  }
+  /* Center-align text inside '.hero-text' */
+  .hero-text {
+    text-align: center;
+  }
+  /* Adjust hero button margin */
+  .hero button {
+    margin: 0;
+  }
+  /* Adjust heading level 1 font size and alignment */
+  h1 {
+    font-size: 40px;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  /* Hide line breaks */
+  br {
+    display: none;
+  }
+  /* Create a semi-transparent overlay */
+  .overlay {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    top: 0;
+    height: 100vh;
+  }
+  /* Style the mobile responsive menu */
+  .mobile-res {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    background-color: #fff;
+    padding: 20px;
+    display: none;
+    width: 180px;
+    height: 100%;
+  }
+  /* Adjust image alignment in the mobile responsive menu */
+  .mobile-res img {
+    text-align: right;
+  }
+  /* Set overlay width to 100% */
+  .overlay {
+    width: 100%;
+  }
+  /* Show the mobile responsive menu */
+  .show {
+    display: flex;
+  }
+  /* Remove margins for links */
+  a {
+    margin: 0;
+  }
+  /* Adjust mobile responsive content container */
+  .mobile-res-con {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: end;
+  }
+  /* Add padding to mobile responsive content elements */
+  .mobile-res-con > * {
+    padding: 20px;
+  }
+  /* Adjust logos layout */
+  .logos {
+    display: flex;
+    gap: 2em;
+  }
+}
